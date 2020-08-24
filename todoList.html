@@ -10,8 +10,20 @@
             var todoList = {
                 todos: [],
                 displayTodos: function() {
-                    console.log("my todos: ", this.todos)
-                    for (initialization; condition; final expression)
+                   
+                    if (this.todos.length === 0) {
+                        console.log('your list is empty!')
+                    } else {
+                        console.log("my todos: ");
+                    for (var i = 0; i < this.todos.length; i++) {
+                    //check if completed is true
+                    if (this.todos[i].completed === true) {
+                        console.log('(x) ', this.todos[i].todoText);
+                    } else {
+                        console.log('( ) ', this.todos[i].todoText);
+                    }
+                    }
+                  }
                 },
                 addTodo: function(todoText) {
                     this.todos.push({
