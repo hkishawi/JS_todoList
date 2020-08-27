@@ -1,10 +1,12 @@
 <html>
     <head>
-        <title>javascript practice</title>
+        <title>RIP, Exploding Blue Lizard</title>
     </head>
 
     <body>
-        老樣子，嗎？
+        <h1>hanny's todo list!</h1>
+        <button id="displayTodosButton">display todos</button>
+        <button id="toggleAllButton">toggle all</button>
 
         <script>
             var todoList = {
@@ -71,6 +73,18 @@
                     }
             };
              
+//grabbing the button
+var displayTodosButton = document.getElementById('displayTodosButton');
+var toggleAllButton = document.getElementById('toggleAllButton');
+
+//run function when button's clicked 
+displayTodosButton.addEventListener('click', function() {
+    todoList.displayTodos();
+});
+toggleAllButton.addEventListener('click', function() {
+    todoList.toggleAll();
+});
+ 
         </script>
     </body>
 </html>
